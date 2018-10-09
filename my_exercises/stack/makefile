@@ -1,12 +1,16 @@
+CXXFLAGS+=-Wall
+EXE = stack_test
+OBJECTS = stack_test.o
+
 all: stack_test
 stack_test : stack_test.o
-	g++ -Wall stack_test.o -o stack_test
+	g++ $(CXXFLAGS) $(OBJECTS) -o $(EXE)
 
-stack_test.o : stack_test.cpp
-	g++ -Wall stack_test.cpp -c -o stack_test.o
+$(OBJECTS) : stack_test.cpp
+	g++ $(CXXFLAGS) stack_test.cpp -c -o $(OBJECTS)
 
 clean :
 	rm -f *.o
 
 distclean :
-	rm -f stack_test
+	rm -f $(EXE)
