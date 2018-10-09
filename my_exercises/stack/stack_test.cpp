@@ -1,3 +1,8 @@
+/*
+    Testing routine for the stack implementation
+*/
+
+
 #include "stack_array.cpp"
 #include "stack_list.cpp"
 #include <iostream>
