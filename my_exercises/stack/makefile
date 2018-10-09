@@ -6,7 +6,7 @@ stack_test.o : stack_test.cpp
 	g++ -Wall stack_test.cpp -c -o stack_test.o
 
 clean :
-	rm -rf *.o
+	rm -f *.o
 
 distclean :
 	rm -f stack_test
