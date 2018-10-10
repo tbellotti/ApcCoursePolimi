@@ -1,5 +1,6 @@
 #include "polynomial_function.h"
 #include "bisection.h"
+#include "newton.h"
 // #include <vector>
 
 int main ()
@@ -19,12 +20,16 @@ int main ()
     Polynomial_Function my_poly (my_coeff);
     my_poly.print();
 
-    Bisection my_method_bs (my_poly, 1.5, 3, 0.0001, BOTH, 200);
+    Bisection my_method_bs (my_poly, 1.5, 3, 0.000001, BOTH, 200);
 
     int n_it;
     real result = my_method_bs.find_root(n_it);
 
-    std::cout<<"Solution = "<<result<<"  found in "<<n_it<<" iterations"<<std::endl;
+    std::cout<<"[BISECTION] Solution = "<<result<<"  found in "<<n_it<<" iterations"<<std::endl;
+
+    Newton my_method_nw (my_poly, 3., 0.000001, BOTH, 200);
+    real result_newton = my_method_nw.find_root(n_it);
+    std::cout<<"[NEWTON] Solution = "<<result_newton<<"  found in "<<n_it<<" iterations"<<std::endl;
 
 
 }

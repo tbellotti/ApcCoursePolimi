@@ -16,7 +16,7 @@ public:
     Polynomial_Function(std::vector <real> & new_coefficients);
     real evaluate (const real point) const;
     void print ();
-    Polynomial_Function derivative ();
+    Polynomial_Function derivative () const;
 };
 
 #endif

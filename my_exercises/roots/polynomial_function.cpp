@@ -32,7 +32,7 @@ void Polynomial_Function::print ()
     std::cout<<std::endl;
 }
 
-Polynomial_Function Polynomial_Function::derivative ()
+Polynomial_Function Polynomial_Function::derivative () const
 {
     std::vector <real> derivative_coefficients;
     unsigned int curr_degree = 0;

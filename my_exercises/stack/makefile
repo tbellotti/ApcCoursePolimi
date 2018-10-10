@@ -9,6 +9,8 @@ stack_test : stack_test.o
 $(OBJECTS) : stack_test.cpp
 	g++ $(CXXFLAGS) stack_test.cpp -c -o $(OBJECTS)
 
+# Add the dependences of stack_test from the libraries I've written... (IMPORTANT)
+
 clean :
 	rm -f *.o
 
