@@ -10,7 +10,9 @@ EXE = test
 # during the make process
 OBJECTS = polynomial_function.o bisection.o newton.o test.o
 
-all : $(EXE) clean
+# NB: You have to add the clean in order to
+# perform this operation when finished.
+all : $(EXE)
 
 $(EXE) : $(OBJECTS)
 	$(CXX) $(CXXFLAGS) $(OBJECTS) -o $(EXE)
