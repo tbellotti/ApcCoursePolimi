@@ -12,6 +12,7 @@ int main ()
     Polynomial_Function test_poly_derivative = test_poly.derivative();
     test_poly_derivative.print();
 
+
     std::cout<<"P(2) = "<<test_poly.evaluate(2)<<"  P'(2) = "<<test_poly_derivative.evaluate(2)<<std::endl;
 
     std::cout<<std::endl<<std::endl<<"Testing BISECTION"<<std::endl;
