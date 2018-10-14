@@ -1,29 +1,12 @@
 #include "segment.h"
 
-Segment::Segment()
-{
-	// Nothing to do.
-}
-
-Segment::Segment (double new_a, double new_b)	
-{
-	if (new_b < new_a)	{
-		cerr<<"You cannot have b < a for a segment"<<endl;
-	}
-	else
-	{
-		a = new_a;
-		b = new_b;
-	}
-}
-
 void Segment::print() const
 {
 	cout<<"Segment : "<<a<<"|------"<<this->getLength()<<"------|"<<b<<endl; 
 }
 
-/*
 
+/*
 // Test function
 int main ()	
 {

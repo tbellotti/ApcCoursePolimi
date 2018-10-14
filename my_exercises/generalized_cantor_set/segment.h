@@ -15,15 +15,22 @@ private:
 
 public:
 	// Constructors
-	Segment(); //  Default constructor.
-	Segment(double new_a, double new_b);
+	Segment() = default; //  Default constructor.
+	Segment(double new_a, double new_b) : a(new_a), b(new_b)
+		{
+			if (new_a > new_b)	{
+				cerr<<"You cannot have b < a for a segment"<<endl;	
+				a = 0.0;
+				b = 0.0;
+			}
+		};
 
 
 	// Other functions
 	inline double getBegin() const { return a; };
 	inline double getEnd() const { return b; };
-	inline double getLength() const { return b-a; };
-	inline double getMiddle() const { return 0.5*(b-a); };
+	inline double getLength() const { return (b-a); };
+	inline double getMiddle() const { return 0.5*(a+b); };
 	
 	void print() const;
 };
