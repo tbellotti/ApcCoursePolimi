@@ -1,0 +1,41 @@
+we want to compute
+
+min_{a <= x <= b} {f(x)}
+
+
+(*) Point
+    #coord_type x
+    ---------------------------------
+    + (usual getter and setters)
+    + distance (*,*)
+    + Euclidian norm (*)
+    + l_\infty norm (*)
+
+(*) Monomial
+    - coefficient
+    - vector <double> powers
+    ---------------------------------
+    + evaluate (const Point &)
+
+
+(*) Function (Polynomial)
+    - vector <Monomial> monomials
+    ---------------------------------
+    + evaluate (const Point & )
+    + evaluate_derivative (unsigned j, const Point & )
+    + add_monomial (const Monomial & )
+
+(*) FunctionMinRn
+    - Function fn
+    - vector <double> inf_limits;
+    - vector <double> sup_limits;
+    - unsigned int max_iter;
+    - const double step;
+    - double tol;
+    - solve(const Point &) // We dont want to give it to the user....
+    ---------------------------------
+    + solve()
+    + solve_multistart(unsigned n_points)
+    + solve_domain_decomposition(unsigned n_inter, unsigned n_trials)
+
+
